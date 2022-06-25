@@ -15,7 +15,7 @@ CFLAGS  = -W -Wall -Wextra -Werror -Wno-unused -g3
 
 CPPFLAGS = -Iinclude/
 
-LDFLAGS = -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
+
 
 SRC	= $(wildcard *.c) \
 	  $(wildcard lib/my/*.c)

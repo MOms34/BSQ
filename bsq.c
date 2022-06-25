@@ -157,7 +157,7 @@ void remplir (char ** map, OKLM *antman)
     int j = antman->j_max;
     int square = antman->square_max;
 
-    for(int b = 1; b < square; b++) {
+    for (int b = 1; b < square; b++) {
         for(int x = 1; x < square; x++){
             map[i][j] = 'x';
             j++;
@@ -165,9 +165,12 @@ void remplir (char ** map, OKLM *antman)
             j -= square - 1;
             i++;
     }
+    printf("antman->nb_line%d\n", antman->nb_line);
        for (int a = 1; a != antman->nb_line; a++) {
-            if (a == (antman->nb_line - 1))
+        printf("a%d\n", a);
+            if (a == (antman->nb_line - 1)) {
                 my_putstr(map[a]);
+            }
             if (a != (antman->nb_line - 1)){
                 my_putstr(map[a]);
                 my_putchar('\n');
@@ -179,6 +182,7 @@ int main (int ac, char **argv)
     struct OKLM antman;
     char *filepath = argv[1];
     int fd = open(filepath, O_RDONLY);
+    char **map = NULL;
 
     if (ac != 2)
         return 84;
@@ -187,9 +191,8 @@ int main (int ac, char **argv)
     first(filepath, &antman);
     creat_tab(filepath, &antman);
     strlen_word(&antman);
-    char **map = tab_finish(&antman);
+    map = tab_finish(&antman);
     find_finish(map, &antman);
     remplir(map, &antman);
-
     return 0;
 }
