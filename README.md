@@ -5,7 +5,7 @@ La map est transmise en deuxième argument du programme en fichier texte (.txt).
 
 ## But du programme
 
-Le but est de remplacer les '.' par des 'x' est de former un carré le plus grand dans un espace de la map. 
+Le but est de remplacer les '.' par des 'x' et de former un carré le plus grand dans un espace de la map. 
 
 ## Fonctions autorisées
 
