@@ -15,7 +15,7 @@ Le but est de remplacer les '.' par des 'x' est de former un carré le plus gran
 	. Exit 
 	. Read
 	. Exit
-``
+```
 
 ## Mise en route
 
